@@ -46,33 +46,33 @@ posts = [
 
 
 def index(request):
-    '''View-функция для выведения всех публикаций на главную страницу сайта.'''
+    """View-функция для выведения всех публикаций на главную страницу сайта."""
     template_name = 'blog/index.html'
     context = {
         'posts': posts,
     }
-    
+
     return render(request, template_name, context)
 
 
 def post_detail(request, id):
-    '''View-функция, возвращающая отдельную публикацию с полным текстом.'''
+    """View-функция, возвращающая отдельную публикацию с полным текстом."""
     template_name = 'blog/detail.html'
     context = {}
 
     for post in posts:
         if post['id'] == id:
-            context = {'post': post,}
+            context = {'post': post, }
             break
-    
-    if not(context):
+
+    if not (context):
         raise Http404
 
     return render(request, template_name, context)
 
 
 def category_posts(request, category_slug):
-    '''View-функция, возвращающая все публикации одной категории.'''
+    """View-функция, возвращающая все публикации одной категории."""
     template_name = 'blog/category.html'
     context = {
         'slug': category_slug,
