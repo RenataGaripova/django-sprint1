@@ -152,3 +152,11 @@ media/
 build_tests/
 yap_testing
 html/img/img/
+
+html/
+blogicum/pages/tests.py
+blogicum/pages/admin.py
+blogicum/pages/models.py
+blogicum/blog/admin.p
+blogicum/blog/models.py
+blogicum/blog/tests.py
