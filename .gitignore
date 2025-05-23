@@ -157,6 +157,6 @@ html/
 blogicum/pages/tests.py
 blogicum/pages/admin.py
 blogicum/pages/models.py
-blogicum/blog/admin.p
+blogicum/blog/admin.py
 blogicum/blog/models.py
 blogicum/blog/tests.py
