@@ -58,9 +58,9 @@ def index(request):
 def post_detail(request, id):
     """View-функция, возвращающая отдельную публикацию с полным текстом."""
     template_name = 'blog/detail.html'
-    posts_by_id = {dct['id']: dct for dct in posts}
+    posts_by_id = {post['id']: post for post in posts}
 
-    if id not in posts_by_id.keys():
+    if id not in posts_by_id:
         raise Http404
 
     context = {
